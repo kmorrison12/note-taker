@@ -2,12 +2,11 @@ const express = require('express')
 const fs = require('fs')
 const path = require('path')
 const noteData = require('./db/db.json')
-const { v4: uuidv4 } = require('uuid')
-
 
 const app = express()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3001;
 
+// const { v4: uuidv4 } = require('uuid')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
